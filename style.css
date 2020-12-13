@@ -1,0 +1,25 @@
+/* font-family: 'Mountains of Christmas', cursive;
+font-family: 'Roboto', sans-serif; 
+
+--black: #000000ff;
+--red-crayola: #f23359ff;
+--spring-green: #53f977ff;
+--saffron: #e3b913ff;
+--white: #ffffffff;
+
+$black: rgba(0, 0, 0, 1);
+$red-crayola: rgba(242, 51, 89, 1);
+$spring-green: rgba(83, 249, 119, 1);
+$saffron: rgba(227, 185, 19, 1);
+$white: rgba(255, 255, 255, 1);*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    background-color: #f23359ff;
+    margin: 50px;
+}
+
+section {
+    margin: 50px;
+}

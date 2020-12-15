@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Roboto:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://raw.githubusercontent.com/CassandraCarse/christmas_leaderboard/master/favicon.ico" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"/>
+    
+</head>
+<body onload="query()">
+    <header>
+        <div class="vc" id="title">
+            <a class="home" href="leaderboard.html">
+                <h2>Fam's</h2>
+                <h1>Christmas</h1>
+                <h2>Pub Crawl</h2>
+            </a>
+        </div>
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-times"></i></a>
+            <div class="overlay-content">
+                <a href="javascript:void(0)" onclick="openRules()">Rules</a>
+                <a href="javascript:void(0)" onclick="openMap()">Map</a>
+                <a href="javascript:void(0)" onclick="openContact()">Contact</a>
+                <a href="javascript:void(0)" onclick="myPassword()"><i class="fas fa-skull-crossbones"></i> Keep Out <i class="fas fa-skull-crossbones"></i></a>
+            </div>
+        </div>
+        <div id="rules" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav(), closeRules()"><i class="fas fa-times"></i></a>
+            <a href="javascript:void(0)" class="backbtn" onclick="closeRules()"><i class="fas fa-arrow-left"></i></a>
+            <div class="overlay-content overlay-text">
+                <h2>Rules</h2>
+                <p>1. I can award or revoke points as I see fit. So start sucking up.</p>
+                <p>2. You must call the movie winner "Your Highnesty" or face punishment.</p>
+                <p>3. You will lose points if you interrupt, don't listen or generally annoy me.</p>
+                <p>3. I can be bought, bribed but not blackmailed.</p>
+            </div>
+        </div>
+        <div id="map" class="overlay map">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav(), closeMap()"><i class="fas fa-times"></i></a>
+            <a href="javascript:void(0)" class="backbtn" onclick="closeMap()"><i class="fas fa-arrow-left"></i></a>
+            <div class="overlay-map">
+                <iframe src="https://snazzymaps.com/embed/279781" width="100%" height="100%" style="border:none;"></iframe>            </div>
+        </div>
+        <div id="contact" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav(), closeContact()"><i class="fas fa-times"></i></a>
+            <a href="javascript:void(0)" class="backbtn" onclick="closeContact()"><i class="fas fa-arrow-left"></i></a>
+            <div class="overlay-content overlay-text">
+                <h2>Contact</h2>
+                <p>Cassie:<a href="tel:+61404108796">0404108796</a></p>
+                <p>Emergency:<a href="javascript:void(0)">000</a></p>
+            </div>
+        </div>
+        <div id="hamburgs">
+            <h1 onclick="openNav()"><i class="fa fa-bars"></i></h1>      
+        </div>   
+    </header>
+    <section class="vc" id="users-section">
+        <div class="place">
+        </div>
+        <div id="addBtn" class="add-new" onclick="openForm()">
+            <i class="fas fa-plus"></i>
+        </div>
+    </section>
+
+<!-- Pop up Form -->
+<div class="form-popup" id="myForm">
+    <form action="#" class="form-container">
+        <div>
+            <h2>New Player</h2>
+            
+            <button type="image" class="user-image"><i class="fas fa-images"></i></button>
+
+            <label for="yourname"></label>
+            <input id="yourname" type="text" placeholder="Name" name="yourname">
+        
+            <button type="submit" class="btn">Create</button>
+            <button type="submit" class="btn cancel" onclick="closeForm()">Cancel</button>
+        </div>
+    </form>
+</div>
+
+<audio id="xyz" src="https://firebasestorage.googleapis.com/v0/b/chistmas-pub-crawl-leaderboard.appspot.com/o/Filmy_Ghost_-_07_-_Alarm_Disaster.mp3?alt=media&token=b4c007da-5ca7-4069-a9db-6aa3a81b3e78" preload="auto"></audio>
+
+<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+
+<!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
+
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
